@@ -544,7 +544,7 @@ export function App() {
       </div>
 
       <div className="mt-8">
-        <Method title="Method, and what is deliberately left out">
+        <Method title="Method">
           <p>
             Revenue in ₹ crore equals million units times rupees per unit, divided by ten. EBITDA is
             revenue minus variable cost minus fixed cost. Depreciation is straight line and stops at
@@ -571,8 +571,7 @@ export function App() {
             Price, variable cost and capex are median-preserving lognormals. Volume is an arithmetic
             shock, correlated with price, and then capped at the nameplate. The cost of equity is
             shocked in levels. Utilization, fixed cost, tax and the debt contract are not shocked.
-            There is no terminal growth. A five-year explicit forecast that needs a perpetuity to
-            work is not a five-year forecast.
+            There is no terminal growth.
           </p>
         </Method>
       </div>

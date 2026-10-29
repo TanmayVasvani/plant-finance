@@ -4,7 +4,7 @@ Capital budgeting for a five-year toothbrush plant: NPV, IRR, MIRR, payback, deb
 
 ![Plant finance](docs/screenshot.png)
 
-**Live:** _add your deployment URL here_ · **Author:** Tanmay Vaswani
+**Live:** https://tanmayvasvani.github.io/plant-finance/ · **Author:** Tanmay Vaswani
 
 ## What it does
 
@@ -25,12 +25,8 @@ Base case: NPV ₹4.45 crore at a 12.2% WACC, project IRR 18.9%, equity IRR 22.9
 - Unlevered tax is charged on EBIT with a loss carry-forward and no interest deduction; the interest tax shield lives in WACC, not in the cash flows. Levered tax (for equity cash flow) does deduct interest.
 - WACC uses the target debt share of capex as the weight, so it is a target structure rather than a market-value weight that updates each year.
 - Working capital is a share of the year's revenue and is released in full in year 5. Salvage is a share of original capex, taxed on the gain over remaining book value.
-- DSCR is (EBITDA − cash tax) / (interest + principal), algebraically the (PAT + depreciation + interest) / debt service ratio Indian term lenders quote. It does not net off the working-capital build, which is why year 1 can clear the covenant while equity cash flow is still negative; the page says so, and notes that a stricter CFADS definition would put year-1 cover well under 1×.
+- DSCR is (EBITDA − cash tax) / (interest + principal), algebraically the (PAT + depreciation + interest) / debt service ratio Indian term lenders quote. It does not net off the working-capital build, which is why year 1 can clear the covenant while equity cash flow is still negative. A stricter CFADS definition would put year-1 cover well under 1×.
 - Monte Carlo shocks are median-preserving lognormals for price, cost and capex (so the base case is the median path), an arithmetic volume shock correlated with price and capped at nameplate, and a level shock to the cost of equity. The seed is fixed, so results are reproducible.
-
-## What is deliberately left out
-
-No terminal value: a five-year forecast that needs a perpetuity to work is not a five-year forecast. No debt sculpting, no reserve account, no tax credit on a salvage loss, no shocks to fixed cost, tax or the debt contract. All of these are the natural next steps and the page is honest about each.
 
 ## Checks
 
@@ -57,7 +53,7 @@ React 19, TypeScript (strict, `noUncheckedIndexedAccess`), Vite, Tailwind CSS 4,
 
 ## Data
 
-Every number on the page is synthetic, seeded and computed in the browser. The case is modelled on the economics of a small Indian toothbrush manufacturer and is an illustration of method, not a forecast or a solicitation.
+The case is a modelled toothbrush plant. Figures are computed in the browser from seeded inputs.
 
 ## License
 
